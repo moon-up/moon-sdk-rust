@@ -4,15 +4,23 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**moon_scan_url** | Option<**String**> |  | [optional]
-**transaction_hash** | **String** |  | 
-**signed_transaction** | **String** |  | 
-**signed_message** | Option<**String**> |  | [optional]
-**raw_transaction** | Option<**String**> |  | [optional]
-**signature** | Option<**String**> |  | [optional]
-**transaction** | Option<[**::std::collections::HashMap<String, crate::models::Tx>**](Tx.md)> |  | [optional]
-**user_ops** | Option<[**Vec<crate::models::TransactionRequest>**](TransactionRequest.md)> |  | [optional]
-**userop_transaction** | Option<**String**> |  | [optional]
+**r#type** | Option<**f64**> |  | [optional]
+**chain_id** | Option<**f64**> |  | [optional]
+**data** | Option<**String**> |  | [optional]
+**gas** | Option<**String**> |  | [optional]
+**gas_price** | Option<**String**> |  | [optional]
+**gas_tip_cap** | Option<**String**> |  | [optional]
+**gas_fee_cap** | Option<**String**> |  | [optional]
+**value** | Option<**String**> |  | [optional]
+**nonce** | Option<**f64**> |  | [optional]
+**from** | Option<**String**> |  | [optional]
+**to** | Option<**String**> |  | [optional]
+**blob_gas** | Option<**String**> |  | [optional]
+**blob_gas_fee_cap** | Option<**String**> |  | [optional]
+**blob_hashes** | Option<**Vec<String>**> |  | [optional]
+**v** | Option<**String**> |  | [optional]
+**r** | Option<**String**> |  | [optional]
+**s** | Option<**String**> |  | [optional]
 **name** | Option<**String**> |  | [optional]
 **symbol** | Option<**String**> |  | [optional]
 **decimals** | Option<**String**> |  | [optional]

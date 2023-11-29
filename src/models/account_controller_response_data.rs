@@ -17,20 +17,22 @@ pub struct AccountControllerResponseData {
     pub nonce: f64,
     #[serde(rename = "balance")]
     pub balance: String,
-    #[serde(rename = "moon_scan_url", skip_serializing_if = "Option::is_none")]
-    pub moon_scan_url: Option<String>,
-    #[serde(rename = "transaction_hash")]
-    pub transaction_hash: String,
-    #[serde(rename = "signed_transaction")]
-    pub signed_transaction: String,
-    #[serde(rename = "signed_message", skip_serializing_if = "Option::is_none")]
-    pub signed_message: Option<String>,
+    #[serde(rename = "transaction_hash", skip_serializing_if = "Option::is_none")]
+    pub transaction_hash: Option<String>,
+    #[serde(rename = "signed_transaction", skip_serializing_if = "Option::is_none")]
+    pub signed_transaction: Option<String>,
     #[serde(rename = "raw_transaction", skip_serializing_if = "Option::is_none")]
     pub raw_transaction: Option<String>,
+    #[serde(rename = "data")]
+    pub data: String,
+    #[serde(rename = "transactions", skip_serializing_if = "Option::is_none")]
+    pub transactions: Option<Vec<crate::models::TransactionData>>,
+    #[serde(rename = "moon_scan_url", skip_serializing_if = "Option::is_none")]
+    pub moon_scan_url: Option<String>,
     #[serde(rename = "signature", skip_serializing_if = "Option::is_none")]
     pub signature: Option<String>,
     #[serde(rename = "transaction", skip_serializing_if = "Option::is_none")]
-    pub transaction: Option<::std::collections::HashMap<String, crate::models::Tx>>,
+    pub transaction: Option<Box<crate::models::Tx>>,
     #[serde(rename = "userOps", skip_serializing_if = "Option::is_none")]
     pub user_ops: Option<Vec<crate::models::TransactionRequest>>,
     #[serde(rename = "userop_transaction", skip_serializing_if = "Option::is_none")]
@@ -41,8 +43,6 @@ pub struct AccountControllerResponseData {
     pub address: String,
     #[serde(rename = "name", skip_serializing_if = "Option::is_none")]
     pub name: Option<String>,
-    #[serde(rename = "data")]
-    pub data: String,
     #[serde(rename = "encoding", skip_serializing_if = "Option::is_none")]
     pub encoding: Option<String>,
     #[serde(rename = "header", skip_serializing_if = "Option::is_none")]
@@ -71,6 +71,36 @@ pub struct AccountControllerResponseData {
     pub last_update_timestamp: String,
     #[serde(rename = "usage_as_collateral_enabled")]
     pub usage_as_collateral_enabled: String,
+    #[serde(rename = "type", skip_serializing_if = "Option::is_none")]
+    pub r#type: Option<f64>,
+    #[serde(rename = "chain_id", skip_serializing_if = "Option::is_none")]
+    pub chain_id: Option<f64>,
+    #[serde(rename = "gas", skip_serializing_if = "Option::is_none")]
+    pub gas: Option<String>,
+    #[serde(rename = "gas_price", skip_serializing_if = "Option::is_none")]
+    pub gas_price: Option<String>,
+    #[serde(rename = "gas_tip_cap", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
+    pub gas_tip_cap: Option<Option<String>>,
+    #[serde(rename = "gas_fee_cap", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
+    pub gas_fee_cap: Option<Option<String>>,
+    #[serde(rename = "value", skip_serializing_if = "Option::is_none")]
+    pub value: Option<String>,
+    #[serde(rename = "from", skip_serializing_if = "Option::is_none")]
+    pub from: Option<String>,
+    #[serde(rename = "to", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
+    pub to: Option<Option<String>>,
+    #[serde(rename = "blob_gas", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
+    pub blob_gas: Option<Option<String>>,
+    #[serde(rename = "blob_gas_fee_cap", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
+    pub blob_gas_fee_cap: Option<Option<String>>,
+    #[serde(rename = "blob_hashes", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
+    pub blob_hashes: Option<Option<Vec<String>>>,
+    #[serde(rename = "v", skip_serializing_if = "Option::is_none")]
+    pub v: Option<String>,
+    #[serde(rename = "r", skip_serializing_if = "Option::is_none")]
+    pub r: Option<String>,
+    #[serde(rename = "s", skip_serializing_if = "Option::is_none")]
+    pub s: Option<String>,
     #[serde(rename = "symbol", skip_serializing_if = "Option::is_none")]
     pub symbol: Option<String>,
     #[serde(rename = "decimals", skip_serializing_if = "Option::is_none")]
@@ -102,15 +132,16 @@ pub struct AccountControllerResponseData {
 }
 
 impl AccountControllerResponseData {
-    pub fn new(nonce: f64, balance: String, transaction_hash: String, signed_transaction: String, address: String, data: String, domain: String, current_atoken_balance: String, current_borrow_balance: String, principal_borrow_balance: String, borrow_rate_mode: String, borrow_rate: String, liquidity_rate: String, origination_fee: String, variable_borrow_index: String, last_update_timestamp: String, usage_as_collateral_enabled: String, success: bool, message: String) -> AccountControllerResponseData {
+    pub fn new(nonce: f64, balance: String, data: String, address: String, domain: String, current_atoken_balance: String, current_borrow_balance: String, principal_borrow_balance: String, borrow_rate_mode: String, borrow_rate: String, liquidity_rate: String, origination_fee: String, variable_borrow_index: String, last_update_timestamp: String, usage_as_collateral_enabled: String, success: bool, message: String) -> AccountControllerResponseData {
         AccountControllerResponseData {
             nonce,
             balance,
-            moon_scan_url: None,
-            transaction_hash,
-            signed_transaction,
-            signed_message: None,
+            transaction_hash: None,
+            signed_transaction: None,
             raw_transaction: None,
+            data,
+            transactions: None,
+            moon_scan_url: None,
             signature: None,
             transaction: None,
             user_ops: None,
@@ -118,7 +149,6 @@ impl AccountControllerResponseData {
             keys: None,
             address,
             name: None,
-            data,
             encoding: None,
             header: None,
             signtype: None,
@@ -133,6 +163,21 @@ impl AccountControllerResponseData {
             variable_borrow_index,
             last_update_timestamp,
             usage_as_collateral_enabled,
+            r#type: None,
+            chain_id: None,
+            gas: None,
+            gas_price: None,
+            gas_tip_cap: None,
+            gas_fee_cap: None,
+            value: None,
+            from: None,
+            to: None,
+            blob_gas: None,
+            blob_gas_fee_cap: None,
+            blob_hashes: None,
+            v: None,
+            r: None,
+            s: None,
             symbol: None,
             decimals: None,
             total_supply: None,

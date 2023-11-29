@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **input** | Option<[**crate::models::InputBody**](InputBody.md)> |  | [optional]
 **convey** | Option<[**crate::models::TransactionResponse**](TransactionResponse.md)> |  | [optional]
-**data** | Option<[**crate::models::Transaction**](Transaction.md)> |  | [optional]
+**data** | Option<[**crate::models::TransactionData**](TransactionData.md)> |  | [optional]
 **tx** | Option<[**crate::models::TransactionResponseTx**](TransactionResponse_tx.md)> |  | [optional]
 **signed** | Option<[**crate::models::Transaction**](Transaction.md)> |  | [optional]
 **success** | **bool** |  | 

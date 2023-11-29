@@ -12,19 +12,17 @@
 
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
-pub struct Transaction {
-    #[serde(rename = "transaction_hash", skip_serializing_if = "Option::is_none")]
-    pub transaction_hash: Option<String>,
-    #[serde(rename = "signed_transaction", skip_serializing_if = "Option::is_none")]
-    pub signed_transaction: Option<String>,
-    #[serde(rename = "raw_transaction", skip_serializing_if = "Option::is_none")]
-    pub raw_transaction: Option<String>,
-    #[serde(rename = "data", skip_serializing_if = "Option::is_none")]
-    pub data: Option<String>,
-    #[serde(rename = "transactions", skip_serializing_if = "Option::is_none")]
-    pub transactions: Option<Vec<crate::models::TransactionData>>,
+pub struct TransactionData {
     #[serde(rename = "moon_scan_url", skip_serializing_if = "Option::is_none")]
     pub moon_scan_url: Option<String>,
+    #[serde(rename = "transaction_hash")]
+    pub transaction_hash: String,
+    #[serde(rename = "signed_transaction")]
+    pub signed_transaction: String,
+    #[serde(rename = "signed_message", skip_serializing_if = "Option::is_none")]
+    pub signed_message: Option<String>,
+    #[serde(rename = "raw_transaction", skip_serializing_if = "Option::is_none")]
+    pub raw_transaction: Option<String>,
     #[serde(rename = "signature", skip_serializing_if = "Option::is_none")]
     pub signature: Option<String>,
     #[serde(rename = "transaction", skip_serializing_if = "Option::is_none")]
@@ -35,15 +33,14 @@ pub struct Transaction {
     pub userop_transaction: Option<String>,
 }
 
-impl Transaction {
-    pub fn new() -> Transaction {
-        Transaction {
-            transaction_hash: None,
-            signed_transaction: None,
-            raw_transaction: None,
-            data: None,
-            transactions: None,
+impl TransactionData {
+    pub fn new(transaction_hash: String, signed_transaction: String) -> TransactionData {
+        TransactionData {
             moon_scan_url: None,
+            transaction_hash,
+            signed_transaction,
+            signed_message: None,
+            raw_transaction: None,
             signature: None,
             transaction: None,
             user_ops: None,

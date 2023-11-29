@@ -158,6 +158,8 @@ pub mod token_swap_params;
 pub use self::token_swap_params::TokenSwapParams;
 pub mod transaction;
 pub use self::transaction::Transaction;
+pub mod transaction_data;
+pub use self::transaction_data::TransactionData;
 pub mod transaction_input;
 pub use self::transaction_input::TransactionInput;
 pub mod transaction_input_meta_data;

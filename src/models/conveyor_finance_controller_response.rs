@@ -18,7 +18,7 @@ pub struct ConveyorFinanceControllerResponse {
     #[serde(rename = "convey", skip_serializing_if = "Option::is_none")]
     pub convey: Option<Box<crate::models::TransactionResponse>>,
     #[serde(rename = "data", skip_serializing_if = "Option::is_none")]
-    pub data: Option<Box<crate::models::Transaction>>,
+    pub data: Option<Box<crate::models::TransactionData>>,
     #[serde(rename = "tx", skip_serializing_if = "Option::is_none")]
     pub tx: Option<Box<crate::models::TransactionResponseTx>>,
     #[serde(rename = "signed", skip_serializing_if = "Option::is_none")]

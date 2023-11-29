@@ -102,6 +102,7 @@ docs/SupportedPaymentTypesCurrencyResponse.md
 docs/SupportedPaymentTypesMessage.md
 docs/TokenSwapParams.md
 docs/Transaction.md
+docs/TransactionData.md
 docs/TransactionInput.md
 docs/TransactionInputMetaData.md
 docs/TransactionInputSupportedParams.md
@@ -229,6 +230,7 @@ src/models/supported_payment_types_currency_response.rs
 src/models/supported_payment_types_message.rs
 src/models/token_swap_params.rs
 src/models/transaction.rs
+src/models/transaction_data.rs
 src/models/transaction_input.rs
 src/models/transaction_input_meta_data.rs
 src/models/transaction_input_supported_params.rs
