@@ -6,16 +6,16 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **nonce** | **f64** |  | 
 **balance** | **String** |  | 
-**transaction_hash** | Option<**String**> |  | [optional]
-**signed_transaction** | Option<**String**> |  | [optional]
-**raw_transaction** | Option<**String**> |  | [optional]
-**data** | **String** |  | 
-**transactions** | Option<[**Vec<crate::models::TransactionData>**](TransactionData.md)> |  | [optional]
-**moon_scan_url** | Option<**String**> |  | [optional]
-**signature** | Option<**String**> |  | [optional]
-**transaction** | Option<[**crate::models::Tx**](Tx.md)> |  | [optional]
-**user_ops** | Option<[**Vec<crate::models::TransactionRequest>**](TransactionRequest.md)> |  | [optional]
 **userop_transaction** | Option<**String**> |  | [optional]
+**user_ops** | Option<[**Vec<crate::models::TransactionRequest>**](TransactionRequest.md)> |  | [optional]
+**transaction** | Option<[**crate::models::Tx**](Tx.md)> |  | [optional]
+**signature** | Option<**String**> |  | [optional]
+**moon_scan_url** | Option<**String**> |  | [optional]
+**transactions** | Option<[**Vec<crate::models::TransactionData>**](TransactionData.md)> |  | [optional]
+**data** | **String** |  | 
+**raw_transaction** | Option<**String**> |  | [optional]
+**signed_transaction** | Option<**String**> |  | [optional]
+**transaction_hash** | Option<**String**> |  | [optional]
 **keys** | Option<**Vec<String>**> |  | [optional]
 **address** | **String** |  | 
 **name** | Option<**String**> |  | [optional]
