@@ -17,26 +17,26 @@ pub struct AccountControllerResponseData {
     pub nonce: f64,
     #[serde(rename = "balance")]
     pub balance: String,
-    #[serde(rename = "userop_transaction", skip_serializing_if = "Option::is_none")]
-    pub userop_transaction: Option<String>,
-    #[serde(rename = "userOps", skip_serializing_if = "Option::is_none")]
-    pub user_ops: Option<Vec<crate::models::TransactionRequest>>,
-    #[serde(rename = "transaction", skip_serializing_if = "Option::is_none")]
-    pub transaction: Option<Box<crate::models::Tx>>,
-    #[serde(rename = "signature", skip_serializing_if = "Option::is_none")]
-    pub signature: Option<String>,
-    #[serde(rename = "moon_scan_url", skip_serializing_if = "Option::is_none")]
-    pub moon_scan_url: Option<String>,
-    #[serde(rename = "transactions", skip_serializing_if = "Option::is_none")]
-    pub transactions: Option<Vec<crate::models::TransactionData>>,
-    #[serde(rename = "data")]
-    pub data: String,
-    #[serde(rename = "raw_transaction", skip_serializing_if = "Option::is_none")]
-    pub raw_transaction: Option<String>,
-    #[serde(rename = "signed_transaction", skip_serializing_if = "Option::is_none")]
-    pub signed_transaction: Option<String>,
     #[serde(rename = "transaction_hash", skip_serializing_if = "Option::is_none")]
     pub transaction_hash: Option<String>,
+    #[serde(rename = "signed_transaction", skip_serializing_if = "Option::is_none")]
+    pub signed_transaction: Option<String>,
+    #[serde(rename = "raw_transaction", skip_serializing_if = "Option::is_none")]
+    pub raw_transaction: Option<String>,
+    #[serde(rename = "data")]
+    pub data: String,
+    #[serde(rename = "transactions", skip_serializing_if = "Option::is_none")]
+    pub transactions: Option<Vec<crate::models::TransactionData>>,
+    #[serde(rename = "moon_scan_url", skip_serializing_if = "Option::is_none")]
+    pub moon_scan_url: Option<String>,
+    #[serde(rename = "signature", skip_serializing_if = "Option::is_none")]
+    pub signature: Option<String>,
+    #[serde(rename = "transaction", skip_serializing_if = "Option::is_none")]
+    pub transaction: Option<Box<crate::models::Tx>>,
+    #[serde(rename = "userOps", skip_serializing_if = "Option::is_none")]
+    pub user_ops: Option<Vec<crate::models::TransactionRequest>>,
+    #[serde(rename = "userop_transaction", skip_serializing_if = "Option::is_none")]
+    pub userop_transaction: Option<String>,
     #[serde(rename = "keys", skip_serializing_if = "Option::is_none")]
     pub keys: Option<Vec<String>>,
     #[serde(rename = "address")]
@@ -136,16 +136,16 @@ impl AccountControllerResponseData {
         AccountControllerResponseData {
             nonce,
             balance,
-            userop_transaction: None,
-            user_ops: None,
-            transaction: None,
-            signature: None,
-            moon_scan_url: None,
-            transactions: None,
-            data,
-            raw_transaction: None,
-            signed_transaction: None,
             transaction_hash: None,
+            signed_transaction: None,
+            raw_transaction: None,
+            data,
+            transactions: None,
+            moon_scan_url: None,
+            signature: None,
+            transaction: None,
+            user_ops: None,
+            userop_transaction: None,
             keys: None,
             address,
             name: None,
