@@ -113,8 +113,6 @@ pub struct AccountControllerResponseData {
     pub balance_of: Option<String>,
     #[serde(rename = "allowance", skip_serializing_if = "Option::is_none")]
     pub allowance: Option<String>,
-    #[serde(rename = "balance_of", skip_serializing_if = "Option::is_none")]
-    pub balance_of: Option<String>,
     #[serde(rename = "balance_of_batch", skip_serializing_if = "Option::is_none")]
     pub balance_of_batch: Option<String>,
     #[serde(rename = "success")]
@@ -184,7 +182,6 @@ impl AccountControllerResponseData {
             contract_address: None,
             balance_of: None,
             allowance: None,
-            balance_of: None,
             balance_of_batch: None,
             success,
             message,

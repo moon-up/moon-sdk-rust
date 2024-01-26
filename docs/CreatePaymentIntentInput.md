@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**config** | Option<**String**> |  | [optional]
 **metadata** | **::std::collections::HashMap<String, String>** |  | 
 **network** | Option<**String**> |  | [optional]
 **amount** | **f64** |  | 

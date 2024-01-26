@@ -154,6 +154,8 @@ pub mod supported_payment_types_currency_response;
 pub use self::supported_payment_types_currency_response::SupportedPaymentTypesCurrencyResponse;
 pub mod supported_payment_types_message;
 pub use self::supported_payment_types_message::SupportedPaymentTypesMessage;
+pub mod tatum_transaction_event;
+pub use self::tatum_transaction_event::TatumTransactionEvent;
 pub mod token_swap_params;
 pub use self::token_swap_params::TokenSwapParams;
 pub mod transaction;

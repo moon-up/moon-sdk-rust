@@ -13,6 +13,8 @@
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct CreatePaymentIntentInput {
+    #[serde(rename = "config", skip_serializing_if = "Option::is_none")]
+    pub config: Option<String>,
     #[serde(rename = "metadata")]
     pub metadata: ::std::collections::HashMap<String, String>,
     #[serde(rename = "network", skip_serializing_if = "Option::is_none")]
@@ -26,6 +28,7 @@ pub struct CreatePaymentIntentInput {
 impl CreatePaymentIntentInput {
     pub fn new(metadata: ::std::collections::HashMap<String, String>, amount: f64) -> CreatePaymentIntentInput {
         CreatePaymentIntentInput {
+            config: None,
             metadata,
             network: None,
             amount,
