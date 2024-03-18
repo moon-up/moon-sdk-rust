@@ -44,7 +44,7 @@ pub enum SignBitcoinTransactionError {
 }
 
 
-pub async fn create_bitcoin_account(configuration: &configuration::Configuration, authorization: &str, bitcoin_input: crate::models::BitcoinInput) -> Result<crate::models::AccountControllerResponse, Error<CreateBitcoinAccountError>> {
+pub async fn create_bitcoin_account(configuration: &configuration::Configuration, authorization: &str, bitcoin_input: crate::models::BitcoinInput) -> Result<crate::models::AccountApiResponse, Error<CreateBitcoinAccountError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -89,7 +89,7 @@ pub async fn create_bitcoin_account(configuration: &configuration::Configuration
     }
 }
 
-pub async fn get_bitcoin_account(configuration: &configuration::Configuration, authorization: &str, account_name: &str) -> Result<crate::models::AccountControllerResponse, Error<GetBitcoinAccountError>> {
+pub async fn get_bitcoin_account(configuration: &configuration::Configuration, authorization: &str, account_name: &str) -> Result<crate::models::AccountApiResponse, Error<GetBitcoinAccountError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -133,7 +133,7 @@ pub async fn get_bitcoin_account(configuration: &configuration::Configuration, a
     }
 }
 
-pub async fn list_bitcoin_accounts(configuration: &configuration::Configuration, authorization: &str) -> Result<crate::models::AccountControllerResponse, Error<ListBitcoinAccountsError>> {
+pub async fn list_bitcoin_accounts(configuration: &configuration::Configuration, authorization: &str) -> Result<crate::models::AccountApiResponse, Error<ListBitcoinAccountsError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -177,7 +177,7 @@ pub async fn list_bitcoin_accounts(configuration: &configuration::Configuration,
     }
 }
 
-pub async fn sign_bitcoin_transaction(configuration: &configuration::Configuration, authorization: &str, account_name: &str, bitcoin_transaction_input: crate::models::BitcoinTransactionInput) -> Result<crate::models::AccountControllerResponse, Error<SignBitcoinTransactionError>> {
+pub async fn sign_bitcoin_transaction(configuration: &configuration::Configuration, authorization: &str, account_name: &str, bitcoin_transaction_input: crate::models::BitcoinTransactionInput) -> Result<crate::models::BitcoinApiResponse, Error<SignBitcoinTransactionError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;

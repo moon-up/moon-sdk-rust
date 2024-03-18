@@ -44,7 +44,7 @@ pub enum SignTronTransactionError {
 }
 
 
-pub async fn create_tron_account(configuration: &configuration::Configuration, authorization: &str, tron_input: crate::models::TronInput) -> Result<crate::models::AccountControllerResponse, Error<CreateTronAccountError>> {
+pub async fn create_tron_account(configuration: &configuration::Configuration, authorization: &str, tron_input: crate::models::TronInput) -> Result<crate::models::AccountApiResponse, Error<CreateTronAccountError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -89,7 +89,7 @@ pub async fn create_tron_account(configuration: &configuration::Configuration, a
     }
 }
 
-pub async fn get_tron_account(configuration: &configuration::Configuration, authorization: &str, account_name: &str) -> Result<crate::models::AccountControllerResponse, Error<GetTronAccountError>> {
+pub async fn get_tron_account(configuration: &configuration::Configuration, authorization: &str, account_name: &str) -> Result<crate::models::AccountApiResponse, Error<GetTronAccountError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -133,7 +133,7 @@ pub async fn get_tron_account(configuration: &configuration::Configuration, auth
     }
 }
 
-pub async fn list_tron_accounts(configuration: &configuration::Configuration, authorization: &str) -> Result<crate::models::AccountControllerResponse, Error<ListTronAccountsError>> {
+pub async fn list_tron_accounts(configuration: &configuration::Configuration, authorization: &str) -> Result<crate::models::AccountApiResponse, Error<ListTronAccountsError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -177,7 +177,7 @@ pub async fn list_tron_accounts(configuration: &configuration::Configuration, au
     }
 }
 
-pub async fn sign_tron_transaction(configuration: &configuration::Configuration, authorization: &str, account_name: &str, tron_transaction_input: crate::models::TronTransactionInput) -> Result<crate::models::AccountControllerResponse, Error<SignTronTransactionError>> {
+pub async fn sign_tron_transaction(configuration: &configuration::Configuration, authorization: &str, account_name: &str, tron_transaction_input: crate::models::TronTransactionInput) -> Result<crate::models::TronApiResponse, Error<SignTronTransactionError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;

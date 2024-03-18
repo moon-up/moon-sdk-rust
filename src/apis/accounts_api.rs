@@ -100,7 +100,7 @@ pub enum TransferEthError {
 }
 
 
-pub async fn broadcast_tx(configuration: &configuration::Configuration, authorization: &str, account_name: &str, broadcast_input: crate::models::BroadcastInput) -> Result<crate::models::AccountControllerResponse, Error<BroadcastTxError>> {
+pub async fn broadcast_tx(configuration: &configuration::Configuration, authorization: &str, account_name: &str, broadcast_input: crate::models::BroadcastInput) -> Result<crate::models::BroadCastRawTransactionApiResponse, Error<BroadcastTxError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -145,7 +145,7 @@ pub async fn broadcast_tx(configuration: &configuration::Configuration, authoriz
     }
 }
 
-pub async fn create_account(configuration: &configuration::Configuration, authorization: &str, create_account_input: crate::models::CreateAccountInput) -> Result<crate::models::AccountControllerResponse, Error<CreateAccountError>> {
+pub async fn create_account(configuration: &configuration::Configuration, authorization: &str, create_account_input: crate::models::CreateAccountInput) -> Result<crate::models::AccountApiResponse, Error<CreateAccountError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -190,7 +190,7 @@ pub async fn create_account(configuration: &configuration::Configuration, author
     }
 }
 
-pub async fn delete_account(configuration: &configuration::Configuration, authorization: &str, account_name: &str) -> Result<crate::models::AccountControllerResponse, Error<DeleteAccountError>> {
+pub async fn delete_account(configuration: &configuration::Configuration, authorization: &str, account_name: &str) -> Result<crate::models::AccountApiResponse, Error<DeleteAccountError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -234,7 +234,7 @@ pub async fn delete_account(configuration: &configuration::Configuration, author
     }
 }
 
-pub async fn deploy_contract(configuration: &configuration::Configuration, authorization: &str, account_name: &str, deploy_input: crate::models::DeployInput) -> Result<crate::models::AccountControllerResponse, Error<DeployContractError>> {
+pub async fn deploy_contract(configuration: &configuration::Configuration, authorization: &str, account_name: &str, deploy_input: crate::models::DeployInput) -> Result<crate::models::TransactionApiResponse, Error<DeployContractError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -279,7 +279,7 @@ pub async fn deploy_contract(configuration: &configuration::Configuration, autho
     }
 }
 
-pub async fn get_account(configuration: &configuration::Configuration, authorization: &str, account_name: &str) -> Result<crate::models::AccountControllerResponse, Error<GetAccountError>> {
+pub async fn get_account(configuration: &configuration::Configuration, authorization: &str, account_name: &str) -> Result<crate::models::AccountApiResponse, Error<GetAccountError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -323,7 +323,7 @@ pub async fn get_account(configuration: &configuration::Configuration, authoriza
     }
 }
 
-pub async fn get_balance(configuration: &configuration::Configuration, account_name: &str, authorization: &str, chain_id: &str) -> Result<crate::models::AccountControllerResponse, Error<GetBalanceError>> {
+pub async fn get_balance(configuration: &configuration::Configuration, account_name: &str, authorization: &str, chain_id: &str) -> Result<crate::models::BalanceApiResponse, Error<GetBalanceError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -368,7 +368,7 @@ pub async fn get_balance(configuration: &configuration::Configuration, account_n
     }
 }
 
-pub async fn get_nonce(configuration: &configuration::Configuration, account_name: &str, authorization: &str) -> Result<crate::models::AccountControllerResponse, Error<GetNonceError>> {
+pub async fn get_nonce(configuration: &configuration::Configuration, account_name: &str, authorization: &str) -> Result<crate::models::NonceApiResponse, Error<GetNonceError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -412,7 +412,7 @@ pub async fn get_nonce(configuration: &configuration::Configuration, account_nam
     }
 }
 
-pub async fn list_accounts(configuration: &configuration::Configuration, authorization: &str) -> Result<crate::models::AccountControllerResponse, Error<ListAccountsError>> {
+pub async fn list_accounts(configuration: &configuration::Configuration, authorization: &str) -> Result<crate::models::AccountApiResponse, Error<ListAccountsError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -456,7 +456,7 @@ pub async fn list_accounts(configuration: &configuration::Configuration, authori
     }
 }
 
-pub async fn sign_message(configuration: &configuration::Configuration, account_name: &str, authorization: &str, sign_message: crate::models::SignMessage) -> Result<crate::models::AccountControllerResponse, Error<SignMessageError>> {
+pub async fn sign_message(configuration: &configuration::Configuration, account_name: &str, authorization: &str, sign_message: crate::models::SignMessage) -> Result<crate::models::SignMessageApiResponse, Error<SignMessageError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -501,7 +501,7 @@ pub async fn sign_message(configuration: &configuration::Configuration, account_
     }
 }
 
-pub async fn sign_transaction(configuration: &configuration::Configuration, account_name: &str, authorization: &str, input_body: crate::models::InputBody) -> Result<crate::models::AccountControllerResponse, Error<SignTransactionError>> {
+pub async fn sign_transaction(configuration: &configuration::Configuration, account_name: &str, authorization: &str, input_body: crate::models::InputBody) -> Result<crate::models::TransactionApiResponse, Error<SignTransactionError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -546,7 +546,7 @@ pub async fn sign_transaction(configuration: &configuration::Configuration, acco
     }
 }
 
-pub async fn sign_typed_data(configuration: &configuration::Configuration, account_name: &str, authorization: &str, sign_typed_data: crate::models::SignTypedData) -> Result<crate::models::AccountControllerResponse, Error<SignTypedDataError>> {
+pub async fn sign_typed_data(configuration: &configuration::Configuration, account_name: &str, authorization: &str, sign_typed_data: crate::models::SignTypedData) -> Result<crate::models::SignMessageApiResponse, Error<SignTypedDataError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -591,7 +591,7 @@ pub async fn sign_typed_data(configuration: &configuration::Configuration, accou
     }
 }
 
-pub async fn transfer_eth(configuration: &configuration::Configuration, account_name: &str, authorization: &str, input_body: crate::models::InputBody) -> Result<crate::models::AccountControllerResponse, Error<TransferEthError>> {
+pub async fn transfer_eth(configuration: &configuration::Configuration, account_name: &str, authorization: &str, input_body: crate::models::InputBody) -> Result<crate::models::TransactionApiResponse, Error<TransferEthError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;

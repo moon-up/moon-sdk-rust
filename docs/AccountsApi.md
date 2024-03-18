@@ -1,6 +1,6 @@
 # \AccountsApi
 
-All URIs are relative to *https://vault-api.usemoon.ai*
+All URIs are relative to *https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -21,7 +21,7 @@ Method | HTTP request | Description
 
 ## broadcast_tx
 
-> crate::models::AccountControllerResponse broadcast_tx(authorization, account_name, broadcast_input)
+> crate::models::BroadCastRawTransactionApiResponse broadcast_tx(authorization, account_name, broadcast_input)
 
 
 ### Parameters
@@ -35,7 +35,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AccountControllerResponse**](AccountControllerResponse.md)
+[**crate::models::BroadCastRawTransactionApiResponse**](BroadCastRawTransactionAPIResponse.md)
 
 ### Authorization
 
@@ -51,7 +51,7 @@ Name | Type | Description  | Required | Notes
 
 ## create_account
 
-> crate::models::AccountControllerResponse create_account(authorization, create_account_input)
+> crate::models::AccountApiResponse create_account(authorization, create_account_input)
 
 
 ### Parameters
@@ -64,7 +64,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AccountControllerResponse**](AccountControllerResponse.md)
+[**crate::models::AccountApiResponse**](AccountAPIResponse.md)
 
 ### Authorization
 
@@ -80,7 +80,7 @@ Name | Type | Description  | Required | Notes
 
 ## delete_account
 
-> crate::models::AccountControllerResponse delete_account(authorization, account_name)
+> crate::models::AccountApiResponse delete_account(authorization, account_name)
 
 
 ### Parameters
@@ -93,7 +93,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AccountControllerResponse**](AccountControllerResponse.md)
+[**crate::models::AccountApiResponse**](AccountAPIResponse.md)
 
 ### Authorization
 
@@ -109,7 +109,7 @@ Name | Type | Description  | Required | Notes
 
 ## deploy_contract
 
-> crate::models::AccountControllerResponse deploy_contract(authorization, account_name, deploy_input)
+> crate::models::TransactionApiResponse deploy_contract(authorization, account_name, deploy_input)
 
 
 ### Parameters
@@ -123,7 +123,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AccountControllerResponse**](AccountControllerResponse.md)
+[**crate::models::TransactionApiResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 
@@ -139,7 +139,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_account
 
-> crate::models::AccountControllerResponse get_account(authorization, account_name)
+> crate::models::AccountApiResponse get_account(authorization, account_name)
 
 
 ### Parameters
@@ -152,7 +152,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AccountControllerResponse**](AccountControllerResponse.md)
+[**crate::models::AccountApiResponse**](AccountAPIResponse.md)
 
 ### Authorization
 
@@ -168,7 +168,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_balance
 
-> crate::models::AccountControllerResponse get_balance(account_name, authorization, chain_id)
+> crate::models::BalanceApiResponse get_balance(account_name, authorization, chain_id)
 
 
 ### Parameters
@@ -182,7 +182,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AccountControllerResponse**](AccountControllerResponse.md)
+[**crate::models::BalanceApiResponse**](BalanceAPIResponse.md)
 
 ### Authorization
 
@@ -198,7 +198,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_nonce
 
-> crate::models::AccountControllerResponse get_nonce(account_name, authorization)
+> crate::models::NonceApiResponse get_nonce(account_name, authorization)
 
 
 ### Parameters
@@ -211,7 +211,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AccountControllerResponse**](AccountControllerResponse.md)
+[**crate::models::NonceApiResponse**](NonceAPIResponse.md)
 
 ### Authorization
 
@@ -227,7 +227,7 @@ Name | Type | Description  | Required | Notes
 
 ## list_accounts
 
-> crate::models::AccountControllerResponse list_accounts(authorization)
+> crate::models::AccountApiResponse list_accounts(authorization)
 
 
 ### Parameters
@@ -239,7 +239,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AccountControllerResponse**](AccountControllerResponse.md)
+[**crate::models::AccountApiResponse**](AccountAPIResponse.md)
 
 ### Authorization
 
@@ -255,7 +255,7 @@ Name | Type | Description  | Required | Notes
 
 ## sign_message
 
-> crate::models::AccountControllerResponse sign_message(account_name, authorization, sign_message)
+> crate::models::SignMessageApiResponse sign_message(account_name, authorization, sign_message)
 
 
 ### Parameters
@@ -269,7 +269,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AccountControllerResponse**](AccountControllerResponse.md)
+[**crate::models::SignMessageApiResponse**](SignMessageAPIResponse.md)
 
 ### Authorization
 
@@ -285,7 +285,7 @@ Name | Type | Description  | Required | Notes
 
 ## sign_transaction
 
-> crate::models::AccountControllerResponse sign_transaction(account_name, authorization, input_body)
+> crate::models::TransactionApiResponse sign_transaction(account_name, authorization, input_body)
 
 
 ### Parameters
@@ -299,7 +299,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AccountControllerResponse**](AccountControllerResponse.md)
+[**crate::models::TransactionApiResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 
@@ -315,7 +315,7 @@ Name | Type | Description  | Required | Notes
 
 ## sign_typed_data
 
-> crate::models::AccountControllerResponse sign_typed_data(account_name, authorization, sign_typed_data)
+> crate::models::SignMessageApiResponse sign_typed_data(account_name, authorization, sign_typed_data)
 
 
 ### Parameters
@@ -329,7 +329,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AccountControllerResponse**](AccountControllerResponse.md)
+[**crate::models::SignMessageApiResponse**](SignMessageAPIResponse.md)
 
 ### Authorization
 
@@ -345,7 +345,7 @@ Name | Type | Description  | Required | Notes
 
 ## transfer_eth
 
-> crate::models::AccountControllerResponse transfer_eth(account_name, authorization, input_body)
+> crate::models::TransactionApiResponse transfer_eth(account_name, authorization, input_body)
 
 
 ### Parameters
@@ -359,7 +359,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AccountControllerResponse**](AccountControllerResponse.md)
+[**crate::models::TransactionApiResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 

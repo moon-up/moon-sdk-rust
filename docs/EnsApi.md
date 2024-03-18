@@ -1,6 +1,6 @@
 # \EnsApi
 
-All URIs are relative to *https://vault-api.usemoon.ai*
+All URIs are relative to *https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## resolve
 
-> crate::models::AccountControllerResponse resolve(authorization, ens_resolve_input)
+> crate::models::EnsResolveApiResponse resolve(authorization, ens_resolve_input)
 
 
 ### Parameters
@@ -23,7 +23,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AccountControllerResponse**](AccountControllerResponse.md)
+[**crate::models::EnsResolveApiResponse**](EnsResolveAPIResponse.md)
 
 ### Authorization
 

@@ -44,7 +44,7 @@ pub enum SignCosmosTransactionError {
 }
 
 
-pub async fn create_cosmos_account(configuration: &configuration::Configuration, authorization: &str, cosmos_input: crate::models::CosmosInput) -> Result<crate::models::AccountControllerResponse, Error<CreateCosmosAccountError>> {
+pub async fn create_cosmos_account(configuration: &configuration::Configuration, authorization: &str, cosmos_input: crate::models::CosmosInput) -> Result<crate::models::AccountApiResponse, Error<CreateCosmosAccountError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -89,7 +89,7 @@ pub async fn create_cosmos_account(configuration: &configuration::Configuration,
     }
 }
 
-pub async fn get_cosmos_account(configuration: &configuration::Configuration, authorization: &str, account_name: &str) -> Result<crate::models::AccountControllerResponse, Error<GetCosmosAccountError>> {
+pub async fn get_cosmos_account(configuration: &configuration::Configuration, authorization: &str, account_name: &str) -> Result<crate::models::AccountApiResponse, Error<GetCosmosAccountError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -133,7 +133,7 @@ pub async fn get_cosmos_account(configuration: &configuration::Configuration, au
     }
 }
 
-pub async fn list_cosmos_accounts(configuration: &configuration::Configuration, authorization: &str) -> Result<crate::models::AccountControllerResponse, Error<ListCosmosAccountsError>> {
+pub async fn list_cosmos_accounts(configuration: &configuration::Configuration, authorization: &str) -> Result<crate::models::AccountApiResponse, Error<ListCosmosAccountsError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -177,7 +177,7 @@ pub async fn list_cosmos_accounts(configuration: &configuration::Configuration, 
     }
 }
 
-pub async fn sign_cosmos_transaction(configuration: &configuration::Configuration, authorization: &str, account_name: &str, cosmos_transaction_input: crate::models::CosmosTransactionInput) -> Result<crate::models::AccountControllerResponse, Error<SignCosmosTransactionError>> {
+pub async fn sign_cosmos_transaction(configuration: &configuration::Configuration, authorization: &str, account_name: &str, cosmos_transaction_input: crate::models::CosmosTransactionInput) -> Result<crate::models::CosmosApiResponse, Error<SignCosmosTransactionError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;

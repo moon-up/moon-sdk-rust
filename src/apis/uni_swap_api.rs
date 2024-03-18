@@ -44,7 +44,7 @@ pub enum SwapExactTokensForTokensError {
 }
 
 
-pub async fn add_liquidity(configuration: &configuration::Configuration, authorization: &str, name: &str, uniswap_input: crate::models::UniswapInput) -> Result<crate::models::AccountControllerResponse, Error<AddLiquidityError>> {
+pub async fn add_liquidity(configuration: &configuration::Configuration, authorization: &str, name: &str, uniswap_input: crate::models::UniswapInput) -> Result<crate::models::TransactionApiResponse, Error<AddLiquidityError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -89,7 +89,7 @@ pub async fn add_liquidity(configuration: &configuration::Configuration, authori
     }
 }
 
-pub async fn remove_liquidity(configuration: &configuration::Configuration, authorization: &str, name: &str, uniswap_input: crate::models::UniswapInput) -> Result<crate::models::AccountControllerResponse, Error<RemoveLiquidityError>> {
+pub async fn remove_liquidity(configuration: &configuration::Configuration, authorization: &str, name: &str, uniswap_input: crate::models::UniswapInput) -> Result<crate::models::TransactionApiResponse, Error<RemoveLiquidityError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -134,7 +134,7 @@ pub async fn remove_liquidity(configuration: &configuration::Configuration, auth
     }
 }
 
-pub async fn swap_exact_eth_for_tokens(configuration: &configuration::Configuration, authorization: &str, name: &str, uniswap_input: crate::models::UniswapInput) -> Result<crate::models::AccountControllerResponse, Error<SwapExactEthForTokensError>> {
+pub async fn swap_exact_eth_for_tokens(configuration: &configuration::Configuration, authorization: &str, name: &str, uniswap_input: crate::models::UniswapInput) -> Result<crate::models::TransactionApiResponse, Error<SwapExactEthForTokensError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -179,7 +179,7 @@ pub async fn swap_exact_eth_for_tokens(configuration: &configuration::Configurat
     }
 }
 
-pub async fn swap_exact_tokens_for_tokens(configuration: &configuration::Configuration, authorization: &str, name: &str, uniswap_input: crate::models::UniswapInput) -> Result<crate::models::AccountControllerResponse, Error<SwapExactTokensForTokensError>> {
+pub async fn swap_exact_tokens_for_tokens(configuration: &configuration::Configuration, authorization: &str, name: &str, uniswap_input: crate::models::UniswapInput) -> Result<crate::models::TransactionApiResponse, Error<SwapExactTokensForTokensError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;

@@ -44,7 +44,7 @@ pub enum SignLitecoinTransactionError {
 }
 
 
-pub async fn create_litecoin_account(configuration: &configuration::Configuration, authorization: &str, litecoin_input: crate::models::LitecoinInput) -> Result<crate::models::AccountControllerResponse, Error<CreateLitecoinAccountError>> {
+pub async fn create_litecoin_account(configuration: &configuration::Configuration, authorization: &str, litecoin_input: crate::models::LitecoinInput) -> Result<crate::models::AccountApiResponse, Error<CreateLitecoinAccountError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -89,7 +89,7 @@ pub async fn create_litecoin_account(configuration: &configuration::Configuratio
     }
 }
 
-pub async fn get_litecoin_account(configuration: &configuration::Configuration, authorization: &str, account_name: &str) -> Result<crate::models::AccountControllerResponse, Error<GetLitecoinAccountError>> {
+pub async fn get_litecoin_account(configuration: &configuration::Configuration, authorization: &str, account_name: &str) -> Result<crate::models::AccountApiResponse, Error<GetLitecoinAccountError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -133,7 +133,7 @@ pub async fn get_litecoin_account(configuration: &configuration::Configuration, 
     }
 }
 
-pub async fn list_litecoin_accounts(configuration: &configuration::Configuration, authorization: &str) -> Result<crate::models::AccountControllerResponse, Error<ListLitecoinAccountsError>> {
+pub async fn list_litecoin_accounts(configuration: &configuration::Configuration, authorization: &str) -> Result<crate::models::AccountApiResponse, Error<ListLitecoinAccountsError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -177,7 +177,7 @@ pub async fn list_litecoin_accounts(configuration: &configuration::Configuration
     }
 }
 
-pub async fn sign_litecoin_transaction(configuration: &configuration::Configuration, authorization: &str, account_name: &str, litecoin_transaction_input: crate::models::LitecoinTransactionInput) -> Result<crate::models::AccountControllerResponse, Error<SignLitecoinTransactionError>> {
+pub async fn sign_litecoin_transaction(configuration: &configuration::Configuration, authorization: &str, account_name: &str, litecoin_transaction_input: crate::models::LitecoinTransactionInput) -> Result<crate::models::LitecoinApiResponse, Error<SignLitecoinTransactionError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;

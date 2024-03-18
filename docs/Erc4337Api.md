@@ -1,6 +1,6 @@
 # \Erc4337Api
 
-All URIs are relative to *https://vault-api.usemoon.ai*
+All URIs are relative to *https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## get_address
 
-> crate::models::AccountControllerResponse get_address(authorization, account_name, input_body)
+> crate::models::AccountApiResponse get_address(authorization, account_name, input_body)
 
 
 ### Parameters
@@ -25,7 +25,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AccountControllerResponse**](AccountControllerResponse.md)
+[**crate::models::AccountApiResponse**](AccountAPIResponse.md)
 
 ### Authorization
 
@@ -41,7 +41,7 @@ Name | Type | Description  | Required | Notes
 
 ## sign_broadcast_user_op_tx
 
-> crate::models::AccountControllerResponse sign_broadcast_user_op_tx(authorization, account_name, input_body)
+> crate::models::TransactionApiResponse sign_broadcast_user_op_tx(authorization, account_name, input_body)
 
 
 ### Parameters
@@ -55,7 +55,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AccountControllerResponse**](AccountControllerResponse.md)
+[**crate::models::TransactionApiResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 

@@ -13,17 +13,14 @@
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct AccountResponse {
-    #[serde(rename = "keys", skip_serializing_if = "Option::is_none")]
-    pub keys: Option<Vec<String>>,
-    #[serde(rename = "address", skip_serializing_if = "Option::is_none")]
-    pub address: Option<String>,
+    #[serde(rename = "data")]
+    pub data: Box<crate::models::AccountData>,
 }
 
 impl AccountResponse {
-    pub fn new() -> AccountResponse {
+    pub fn new(data: crate::models::AccountData) -> AccountResponse {
         AccountResponse {
-            keys: None,
-            address: None,
+            data: Box::new(data),
         }
     }
 }

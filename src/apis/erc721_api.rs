@@ -100,7 +100,7 @@ pub enum TransferFromError {
 }
 
 
-pub async fn approve(configuration: &configuration::Configuration, authorization: &str, name: &str, erc721_request: crate::models::Erc721Request) -> Result<crate::models::AccountControllerResponse, Error<ApproveError>> {
+pub async fn approve(configuration: &configuration::Configuration, authorization: &str, name: &str, erc721_request: crate::models::Erc721Request) -> Result<crate::models::TransactionApiResponse, Error<ApproveError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -145,7 +145,7 @@ pub async fn approve(configuration: &configuration::Configuration, authorization
     }
 }
 
-pub async fn balance_of(configuration: &configuration::Configuration, authorization: &str, name: &str, erc721_request: crate::models::Erc721Request) -> Result<crate::models::AccountControllerResponse, Error<BalanceOfError>> {
+pub async fn balance_of(configuration: &configuration::Configuration, authorization: &str, name: &str, erc721_request: crate::models::Erc721Request) -> Result<crate::models::TransactionApiResponse, Error<BalanceOfError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -190,7 +190,7 @@ pub async fn balance_of(configuration: &configuration::Configuration, authorizat
     }
 }
 
-pub async fn get_approved(configuration: &configuration::Configuration, authorization: &str, name: &str, erc721_request: crate::models::Erc721Request) -> Result<crate::models::AccountControllerResponse, Error<GetApprovedError>> {
+pub async fn get_approved(configuration: &configuration::Configuration, authorization: &str, name: &str, erc721_request: crate::models::Erc721Request) -> Result<crate::models::TransactionApiResponse, Error<GetApprovedError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -235,7 +235,7 @@ pub async fn get_approved(configuration: &configuration::Configuration, authoriz
     }
 }
 
-pub async fn is_approved_for_all(configuration: &configuration::Configuration, authorization: &str, name: &str, erc721_request: crate::models::Erc721Request) -> Result<crate::models::AccountControllerResponse, Error<IsApprovedForAllError>> {
+pub async fn is_approved_for_all(configuration: &configuration::Configuration, authorization: &str, name: &str, erc721_request: crate::models::Erc721Request) -> Result<crate::models::TransactionApiResponse, Error<IsApprovedForAllError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -280,7 +280,7 @@ pub async fn is_approved_for_all(configuration: &configuration::Configuration, a
     }
 }
 
-pub async fn name(configuration: &configuration::Configuration, authorization: &str, name: &str, erc721_request: crate::models::Erc721Request) -> Result<crate::models::AccountControllerResponse, Error<NameError>> {
+pub async fn name(configuration: &configuration::Configuration, authorization: &str, name: &str, erc721_request: crate::models::Erc721Request) -> Result<crate::models::TransactionApiResponse, Error<NameError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -325,7 +325,7 @@ pub async fn name(configuration: &configuration::Configuration, authorization: &
     }
 }
 
-pub async fn owner_of(configuration: &configuration::Configuration, authorization: &str, name: &str, erc721_request: crate::models::Erc721Request) -> Result<crate::models::AccountControllerResponse, Error<OwnerOfError>> {
+pub async fn owner_of(configuration: &configuration::Configuration, authorization: &str, name: &str, erc721_request: crate::models::Erc721Request) -> Result<crate::models::TransactionApiResponse, Error<OwnerOfError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -370,7 +370,7 @@ pub async fn owner_of(configuration: &configuration::Configuration, authorizatio
     }
 }
 
-pub async fn safe_transfer_from(configuration: &configuration::Configuration, authorization: &str, name: &str, erc721_request: crate::models::Erc721Request) -> Result<crate::models::AccountControllerResponse, Error<SafeTransferFromError>> {
+pub async fn safe_transfer_from(configuration: &configuration::Configuration, authorization: &str, name: &str, erc721_request: crate::models::Erc721Request) -> Result<crate::models::TransactionApiResponse, Error<SafeTransferFromError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -415,7 +415,7 @@ pub async fn safe_transfer_from(configuration: &configuration::Configuration, au
     }
 }
 
-pub async fn set_approval_for_all(configuration: &configuration::Configuration, authorization: &str, name: &str, erc721_request: crate::models::Erc721Request) -> Result<crate::models::AccountControllerResponse, Error<SetApprovalForAllError>> {
+pub async fn set_approval_for_all(configuration: &configuration::Configuration, authorization: &str, name: &str, erc721_request: crate::models::Erc721Request) -> Result<crate::models::TransactionApiResponse, Error<SetApprovalForAllError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -460,7 +460,7 @@ pub async fn set_approval_for_all(configuration: &configuration::Configuration, 
     }
 }
 
-pub async fn symbol(configuration: &configuration::Configuration, authorization: &str, name: &str, erc721_request: crate::models::Erc721Request) -> Result<crate::models::AccountControllerResponse, Error<SymbolError>> {
+pub async fn symbol(configuration: &configuration::Configuration, authorization: &str, name: &str, erc721_request: crate::models::Erc721Request) -> Result<crate::models::TransactionApiResponse, Error<SymbolError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -505,7 +505,7 @@ pub async fn symbol(configuration: &configuration::Configuration, authorization:
     }
 }
 
-pub async fn token_uri(configuration: &configuration::Configuration, authorization: &str, name: &str, erc721_request: crate::models::Erc721Request) -> Result<crate::models::AccountControllerResponse, Error<TokenUriError>> {
+pub async fn token_uri(configuration: &configuration::Configuration, authorization: &str, name: &str, erc721_request: crate::models::Erc721Request) -> Result<crate::models::TransactionApiResponse, Error<TokenUriError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -550,7 +550,7 @@ pub async fn token_uri(configuration: &configuration::Configuration, authorizati
     }
 }
 
-pub async fn transfer(configuration: &configuration::Configuration, authorization: &str, name: &str, erc721_request: crate::models::Erc721Request) -> Result<crate::models::AccountControllerResponse, Error<TransferError>> {
+pub async fn transfer(configuration: &configuration::Configuration, authorization: &str, name: &str, erc721_request: crate::models::Erc721Request) -> Result<crate::models::TransactionApiResponse, Error<TransferError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -595,7 +595,7 @@ pub async fn transfer(configuration: &configuration::Configuration, authorizatio
     }
 }
 
-pub async fn transfer_from(configuration: &configuration::Configuration, authorization: &str, name: &str, erc721_request: crate::models::Erc721Request) -> Result<crate::models::AccountControllerResponse, Error<TransferFromError>> {
+pub async fn transfer_from(configuration: &configuration::Configuration, authorization: &str, name: &str, erc721_request: crate::models::Erc721Request) -> Result<crate::models::TransactionApiResponse, Error<TransferFromError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;

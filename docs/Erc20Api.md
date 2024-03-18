@@ -1,6 +1,6 @@
 # \Erc20Api
 
-All URIs are relative to *https://vault-api.usemoon.ai*
+All URIs are relative to *https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 ## allowance_erc20
 
-> crate::models::AccountControllerResponse allowance_erc20(authorization, name, input_body)
+> crate::models::TransactionApiResponse allowance_erc20(authorization, name, input_body)
 
 
 ### Parameters
@@ -32,7 +32,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AccountControllerResponse**](AccountControllerResponse.md)
+[**crate::models::TransactionApiResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 
@@ -48,7 +48,7 @@ Name | Type | Description  | Required | Notes
 
 ## approve_erc20
 
-> crate::models::AccountControllerResponse approve_erc20(authorization, name, input_body)
+> crate::models::TransactionApiResponse approve_erc20(authorization, name, input_body)
 
 
 ### Parameters
@@ -62,7 +62,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AccountControllerResponse**](AccountControllerResponse.md)
+[**crate::models::TransactionApiResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 
@@ -78,7 +78,7 @@ Name | Type | Description  | Required | Notes
 
 ## balance_of_erc20
 
-> crate::models::AccountControllerResponse balance_of_erc20(authorization, name, input_body)
+> crate::models::TransactionApiResponse balance_of_erc20(authorization, name, input_body)
 
 
 ### Parameters
@@ -92,7 +92,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AccountControllerResponse**](AccountControllerResponse.md)
+[**crate::models::TransactionApiResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 
@@ -108,7 +108,7 @@ Name | Type | Description  | Required | Notes
 
 ## decimals_erc20
 
-> crate::models::AccountControllerResponse decimals_erc20(authorization, name, input_body)
+> crate::models::TransactionApiResponse decimals_erc20(authorization, name, input_body)
 
 
 ### Parameters
@@ -122,7 +122,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AccountControllerResponse**](AccountControllerResponse.md)
+[**crate::models::TransactionApiResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 
@@ -138,7 +138,7 @@ Name | Type | Description  | Required | Notes
 
 ## name_erc20
 
-> crate::models::AccountControllerResponse name_erc20(authorization, name, input_body)
+> crate::models::TransactionApiResponse name_erc20(authorization, name, input_body)
 
 
 ### Parameters
@@ -152,7 +152,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AccountControllerResponse**](AccountControllerResponse.md)
+[**crate::models::TransactionApiResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 
@@ -168,7 +168,7 @@ Name | Type | Description  | Required | Notes
 
 ## symbol_erc20
 
-> crate::models::AccountControllerResponse symbol_erc20(authorization, name, input_body)
+> crate::models::TransactionApiResponse symbol_erc20(authorization, name, input_body)
 
 
 ### Parameters
@@ -182,7 +182,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AccountControllerResponse**](AccountControllerResponse.md)
+[**crate::models::TransactionApiResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 
@@ -198,7 +198,7 @@ Name | Type | Description  | Required | Notes
 
 ## total_supply_erc20
 
-> crate::models::AccountControllerResponse total_supply_erc20(authorization, name, input_body)
+> crate::models::TransactionApiResponse total_supply_erc20(authorization, name, input_body)
 
 
 ### Parameters
@@ -212,7 +212,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AccountControllerResponse**](AccountControllerResponse.md)
+[**crate::models::TransactionApiResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 
@@ -228,7 +228,7 @@ Name | Type | Description  | Required | Notes
 
 ## transfer_erc20
 
-> crate::models::AccountControllerResponse transfer_erc20(authorization, name, input_body)
+> crate::models::TransactionApiResponse transfer_erc20(authorization, name, input_body)
 
 
 ### Parameters
@@ -242,7 +242,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AccountControllerResponse**](AccountControllerResponse.md)
+[**crate::models::TransactionApiResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 
@@ -258,7 +258,7 @@ Name | Type | Description  | Required | Notes
 
 ## transfer_from_erc20
 
-> crate::models::AccountControllerResponse transfer_from_erc20(authorization, name, input_body)
+> crate::models::TransactionApiResponse transfer_from_erc20(authorization, name, input_body)
 
 
 ### Parameters
@@ -272,7 +272,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AccountControllerResponse**](AccountControllerResponse.md)
+[**crate::models::TransactionApiResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 

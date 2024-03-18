@@ -1,6 +1,6 @@
 # \YearnApi
 
-All URIs are relative to *https://vault-api.usemoon.ai*
+All URIs are relative to *https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## add_liquidity
 
-> crate::models::AccountControllerResponse add_liquidity(authorization, name, input_body)
+> crate::models::TransactionApiResponse add_liquidity(authorization, name, input_body)
 
 
 ### Parameters
@@ -27,7 +27,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AccountControllerResponse**](AccountControllerResponse.md)
+[**crate::models::TransactionApiResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 
@@ -43,7 +43,7 @@ Name | Type | Description  | Required | Notes
 
 ## add_liquidity_weth
 
-> crate::models::AccountControllerResponse add_liquidity_weth(authorization, name, input_body)
+> crate::models::TransactionApiResponse add_liquidity_weth(authorization, name, input_body)
 
 
 ### Parameters
@@ -57,7 +57,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AccountControllerResponse**](AccountControllerResponse.md)
+[**crate::models::TransactionApiResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 
@@ -73,7 +73,7 @@ Name | Type | Description  | Required | Notes
 
 ## remove_liquidity
 
-> crate::models::AccountControllerResponse remove_liquidity(authorization, name, input_body)
+> crate::models::TransactionApiResponse remove_liquidity(authorization, name, input_body)
 
 
 ### Parameters
@@ -87,7 +87,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AccountControllerResponse**](AccountControllerResponse.md)
+[**crate::models::TransactionApiResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 
@@ -103,7 +103,7 @@ Name | Type | Description  | Required | Notes
 
 ## remove_liquidity_weth
 
-> crate::models::AccountControllerResponse remove_liquidity_weth(authorization, name, input_body)
+> crate::models::TransactionApiResponse remove_liquidity_weth(authorization, name, input_body)
 
 
 ### Parameters
@@ -117,7 +117,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AccountControllerResponse**](AccountControllerResponse.md)
+[**crate::models::TransactionApiResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 

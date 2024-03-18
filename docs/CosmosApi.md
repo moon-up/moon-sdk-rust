@@ -1,6 +1,6 @@
 # \CosmosApi
 
-All URIs are relative to *https://vault-api.usemoon.ai*
+All URIs are relative to *https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## create_cosmos_account
 
-> crate::models::AccountControllerResponse create_cosmos_account(authorization, cosmos_input)
+> crate::models::AccountApiResponse create_cosmos_account(authorization, cosmos_input)
 
 
 ### Parameters
@@ -26,7 +26,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AccountControllerResponse**](AccountControllerResponse.md)
+[**crate::models::AccountApiResponse**](AccountAPIResponse.md)
 
 ### Authorization
 
@@ -42,7 +42,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_cosmos_account
 
-> crate::models::AccountControllerResponse get_cosmos_account(authorization, account_name)
+> crate::models::AccountApiResponse get_cosmos_account(authorization, account_name)
 
 
 ### Parameters
@@ -55,7 +55,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AccountControllerResponse**](AccountControllerResponse.md)
+[**crate::models::AccountApiResponse**](AccountAPIResponse.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ Name | Type | Description  | Required | Notes
 
 ## list_cosmos_accounts
 
-> crate::models::AccountControllerResponse list_cosmos_accounts(authorization)
+> crate::models::AccountApiResponse list_cosmos_accounts(authorization)
 
 
 ### Parameters
@@ -83,7 +83,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AccountControllerResponse**](AccountControllerResponse.md)
+[**crate::models::AccountApiResponse**](AccountAPIResponse.md)
 
 ### Authorization
 
@@ -99,7 +99,7 @@ Name | Type | Description  | Required | Notes
 
 ## sign_cosmos_transaction
 
-> crate::models::AccountControllerResponse sign_cosmos_transaction(authorization, account_name, cosmos_transaction_input)
+> crate::models::CosmosApiResponse sign_cosmos_transaction(authorization, account_name, cosmos_transaction_input)
 
 
 ### Parameters
@@ -113,7 +113,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AccountControllerResponse**](AccountControllerResponse.md)
+[**crate::models::CosmosApiResponse**](CosmosAPIResponse.md)
 
 ### Authorization
 

@@ -1,6 +1,6 @@
 # \Erc721Api
 
-All URIs are relative to *https://vault-api.usemoon.ai*
+All URIs are relative to *https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -21,7 +21,7 @@ Method | HTTP request | Description
 
 ## approve
 
-> crate::models::AccountControllerResponse approve(authorization, name, erc721_request)
+> crate::models::TransactionApiResponse approve(authorization, name, erc721_request)
 
 
 ### Parameters
@@ -35,7 +35,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AccountControllerResponse**](AccountControllerResponse.md)
+[**crate::models::TransactionApiResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 
@@ -51,7 +51,7 @@ Name | Type | Description  | Required | Notes
 
 ## balance_of
 
-> crate::models::AccountControllerResponse balance_of(authorization, name, erc721_request)
+> crate::models::TransactionApiResponse balance_of(authorization, name, erc721_request)
 
 
 ### Parameters
@@ -65,7 +65,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AccountControllerResponse**](AccountControllerResponse.md)
+[**crate::models::TransactionApiResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_approved
 
-> crate::models::AccountControllerResponse get_approved(authorization, name, erc721_request)
+> crate::models::TransactionApiResponse get_approved(authorization, name, erc721_request)
 
 
 ### Parameters
@@ -95,7 +95,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AccountControllerResponse**](AccountControllerResponse.md)
+[**crate::models::TransactionApiResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 
@@ -111,7 +111,7 @@ Name | Type | Description  | Required | Notes
 
 ## is_approved_for_all
 
-> crate::models::AccountControllerResponse is_approved_for_all(authorization, name, erc721_request)
+> crate::models::TransactionApiResponse is_approved_for_all(authorization, name, erc721_request)
 
 
 ### Parameters
@@ -125,7 +125,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AccountControllerResponse**](AccountControllerResponse.md)
+[**crate::models::TransactionApiResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 
@@ -141,7 +141,7 @@ Name | Type | Description  | Required | Notes
 
 ## name
 
-> crate::models::AccountControllerResponse name(authorization, name, erc721_request)
+> crate::models::TransactionApiResponse name(authorization, name, erc721_request)
 
 
 ### Parameters
@@ -155,7 +155,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AccountControllerResponse**](AccountControllerResponse.md)
+[**crate::models::TransactionApiResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 
@@ -171,7 +171,7 @@ Name | Type | Description  | Required | Notes
 
 ## owner_of
 
-> crate::models::AccountControllerResponse owner_of(authorization, name, erc721_request)
+> crate::models::TransactionApiResponse owner_of(authorization, name, erc721_request)
 
 
 ### Parameters
@@ -185,7 +185,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AccountControllerResponse**](AccountControllerResponse.md)
+[**crate::models::TransactionApiResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 
@@ -201,7 +201,7 @@ Name | Type | Description  | Required | Notes
 
 ## safe_transfer_from
 
-> crate::models::AccountControllerResponse safe_transfer_from(authorization, name, erc721_request)
+> crate::models::TransactionApiResponse safe_transfer_from(authorization, name, erc721_request)
 
 
 ### Parameters
@@ -215,7 +215,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AccountControllerResponse**](AccountControllerResponse.md)
+[**crate::models::TransactionApiResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 
@@ -231,7 +231,7 @@ Name | Type | Description  | Required | Notes
 
 ## set_approval_for_all
 
-> crate::models::AccountControllerResponse set_approval_for_all(authorization, name, erc721_request)
+> crate::models::TransactionApiResponse set_approval_for_all(authorization, name, erc721_request)
 
 
 ### Parameters
@@ -245,7 +245,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AccountControllerResponse**](AccountControllerResponse.md)
+[**crate::models::TransactionApiResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 
@@ -261,7 +261,7 @@ Name | Type | Description  | Required | Notes
 
 ## symbol
 
-> crate::models::AccountControllerResponse symbol(authorization, name, erc721_request)
+> crate::models::TransactionApiResponse symbol(authorization, name, erc721_request)
 
 
 ### Parameters
@@ -275,7 +275,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AccountControllerResponse**](AccountControllerResponse.md)
+[**crate::models::TransactionApiResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 
@@ -291,7 +291,7 @@ Name | Type | Description  | Required | Notes
 
 ## token_uri
 
-> crate::models::AccountControllerResponse token_uri(authorization, name, erc721_request)
+> crate::models::TransactionApiResponse token_uri(authorization, name, erc721_request)
 
 
 ### Parameters
@@ -305,7 +305,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AccountControllerResponse**](AccountControllerResponse.md)
+[**crate::models::TransactionApiResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 
@@ -321,7 +321,7 @@ Name | Type | Description  | Required | Notes
 
 ## transfer
 
-> crate::models::AccountControllerResponse transfer(authorization, name, erc721_request)
+> crate::models::TransactionApiResponse transfer(authorization, name, erc721_request)
 
 
 ### Parameters
@@ -335,7 +335,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AccountControllerResponse**](AccountControllerResponse.md)
+[**crate::models::TransactionApiResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 
@@ -351,7 +351,7 @@ Name | Type | Description  | Required | Notes
 
 ## transfer_from
 
-> crate::models::AccountControllerResponse transfer_from(authorization, name, erc721_request)
+> crate::models::TransactionApiResponse transfer_from(authorization, name, erc721_request)
 
 
 ### Parameters
@@ -365,7 +365,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AccountControllerResponse**](AccountControllerResponse.md)
+[**crate::models::TransactionApiResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 

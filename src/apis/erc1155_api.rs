@@ -58,7 +58,7 @@ pub enum SetApprovalForAllError {
 }
 
 
-pub async fn balance_of(configuration: &configuration::Configuration, name: &str, authorization: &str, erc1155_request: crate::models::Erc1155Request) -> Result<crate::models::AccountControllerResponse, Error<BalanceOfError>> {
+pub async fn balance_of(configuration: &configuration::Configuration, name: &str, authorization: &str, erc1155_request: crate::models::Erc1155Request) -> Result<crate::models::TransactionApiResponse, Error<BalanceOfError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -103,7 +103,7 @@ pub async fn balance_of(configuration: &configuration::Configuration, name: &str
     }
 }
 
-pub async fn balance_of_batch(configuration: &configuration::Configuration, name: &str, authorization: &str, erc1155_request: crate::models::Erc1155Request) -> Result<crate::models::AccountControllerResponse, Error<BalanceOfBatchError>> {
+pub async fn balance_of_batch(configuration: &configuration::Configuration, name: &str, authorization: &str, erc1155_request: crate::models::Erc1155Request) -> Result<crate::models::TransactionApiResponse, Error<BalanceOfBatchError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -148,7 +148,7 @@ pub async fn balance_of_batch(configuration: &configuration::Configuration, name
     }
 }
 
-pub async fn is_approved_for_all(configuration: &configuration::Configuration, name: &str, authorization: &str, erc1155_request: crate::models::Erc1155Request) -> Result<crate::models::AccountControllerResponse, Error<IsApprovedForAllError>> {
+pub async fn is_approved_for_all(configuration: &configuration::Configuration, name: &str, authorization: &str, erc1155_request: crate::models::Erc1155Request) -> Result<crate::models::TransactionApiResponse, Error<IsApprovedForAllError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -193,7 +193,7 @@ pub async fn is_approved_for_all(configuration: &configuration::Configuration, n
     }
 }
 
-pub async fn safe_batch_transfer_from(configuration: &configuration::Configuration, name: &str, authorization: &str, erc1155_request: crate::models::Erc1155Request) -> Result<crate::models::AccountControllerResponse, Error<SafeBatchTransferFromError>> {
+pub async fn safe_batch_transfer_from(configuration: &configuration::Configuration, name: &str, authorization: &str, erc1155_request: crate::models::Erc1155Request) -> Result<crate::models::TransactionApiResponse, Error<SafeBatchTransferFromError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -238,7 +238,7 @@ pub async fn safe_batch_transfer_from(configuration: &configuration::Configurati
     }
 }
 
-pub async fn safe_transfer_from(configuration: &configuration::Configuration, name: &str, authorization: &str, erc1155_request: crate::models::Erc1155Request) -> Result<crate::models::AccountControllerResponse, Error<SafeTransferFromError>> {
+pub async fn safe_transfer_from(configuration: &configuration::Configuration, name: &str, authorization: &str, erc1155_request: crate::models::Erc1155Request) -> Result<crate::models::TransactionApiResponse, Error<SafeTransferFromError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -283,7 +283,7 @@ pub async fn safe_transfer_from(configuration: &configuration::Configuration, na
     }
 }
 
-pub async fn set_approval_for_all(configuration: &configuration::Configuration, name: &str, authorization: &str, erc1155_request: crate::models::Erc1155Request) -> Result<crate::models::AccountControllerResponse, Error<SetApprovalForAllError>> {
+pub async fn set_approval_for_all(configuration: &configuration::Configuration, name: &str, authorization: &str, erc1155_request: crate::models::Erc1155Request) -> Result<crate::models::TransactionApiResponse, Error<SetApprovalForAllError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;

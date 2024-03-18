@@ -107,7 +107,6 @@ pub mod erc721_api;
 pub mod litecoin_api;
 pub mod oneinch_api;
 pub mod onramper_api;
-pub mod payment_api;
 pub mod ripple_api;
 pub mod solana_api;
 pub mod tron_api;

@@ -30,7 +30,7 @@ pub enum SignBroadcastUserOpTxError {
 }
 
 
-pub async fn get_address(configuration: &configuration::Configuration, authorization: &str, account_name: &str, input_body: crate::models::InputBody) -> Result<crate::models::AccountControllerResponse, Error<GetAddressError>> {
+pub async fn get_address(configuration: &configuration::Configuration, authorization: &str, account_name: &str, input_body: crate::models::InputBody) -> Result<crate::models::AccountApiResponse, Error<GetAddressError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -75,7 +75,7 @@ pub async fn get_address(configuration: &configuration::Configuration, authoriza
     }
 }
 
-pub async fn sign_broadcast_user_op_tx(configuration: &configuration::Configuration, authorization: &str, account_name: &str, input_body: crate::models::InputBody) -> Result<crate::models::AccountControllerResponse, Error<SignBroadcastUserOpTxError>> {
+pub async fn sign_broadcast_user_op_tx(configuration: &configuration::Configuration, authorization: &str, account_name: &str, input_body: crate::models::InputBody) -> Result<crate::models::TransactionApiResponse, Error<SignBroadcastUserOpTxError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;

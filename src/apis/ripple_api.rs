@@ -44,7 +44,7 @@ pub enum SignRippleTransactionError {
 }
 
 
-pub async fn create_ripple_account(configuration: &configuration::Configuration, authorization: &str, ripple_input: crate::models::RippleInput) -> Result<crate::models::AccountControllerResponse, Error<CreateRippleAccountError>> {
+pub async fn create_ripple_account(configuration: &configuration::Configuration, authorization: &str, ripple_input: crate::models::RippleInput) -> Result<crate::models::AccountApiResponse, Error<CreateRippleAccountError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -89,7 +89,7 @@ pub async fn create_ripple_account(configuration: &configuration::Configuration,
     }
 }
 
-pub async fn get_ripple_account(configuration: &configuration::Configuration, authorization: &str, account_name: &str) -> Result<crate::models::AccountControllerResponse, Error<GetRippleAccountError>> {
+pub async fn get_ripple_account(configuration: &configuration::Configuration, authorization: &str, account_name: &str) -> Result<crate::models::AccountApiResponse, Error<GetRippleAccountError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -133,7 +133,7 @@ pub async fn get_ripple_account(configuration: &configuration::Configuration, au
     }
 }
 
-pub async fn list_ripple_accounts(configuration: &configuration::Configuration, authorization: &str) -> Result<crate::models::AccountControllerResponse, Error<ListRippleAccountsError>> {
+pub async fn list_ripple_accounts(configuration: &configuration::Configuration, authorization: &str) -> Result<crate::models::AccountApiResponse, Error<ListRippleAccountsError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -177,7 +177,7 @@ pub async fn list_ripple_accounts(configuration: &configuration::Configuration, 
     }
 }
 
-pub async fn sign_ripple_transaction(configuration: &configuration::Configuration, authorization: &str, account_name: &str, ripple_transaction_input: crate::models::RippleTransactionInput) -> Result<crate::models::AccountControllerResponse, Error<SignRippleTransactionError>> {
+pub async fn sign_ripple_transaction(configuration: &configuration::Configuration, authorization: &str, account_name: &str, ripple_transaction_input: crate::models::RippleTransactionInput) -> Result<crate::models::RippleApiResponse, Error<SignRippleTransactionError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;

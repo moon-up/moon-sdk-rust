@@ -44,7 +44,7 @@ pub enum RemoveLiquidityWethError {
 }
 
 
-pub async fn add_liquidity(configuration: &configuration::Configuration, authorization: &str, name: &str, input_body: crate::models::InputBody) -> Result<crate::models::AccountControllerResponse, Error<AddLiquidityError>> {
+pub async fn add_liquidity(configuration: &configuration::Configuration, authorization: &str, name: &str, input_body: crate::models::InputBody) -> Result<crate::models::TransactionApiResponse, Error<AddLiquidityError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -89,7 +89,7 @@ pub async fn add_liquidity(configuration: &configuration::Configuration, authori
     }
 }
 
-pub async fn add_liquidity_weth(configuration: &configuration::Configuration, authorization: &str, name: &str, input_body: crate::models::InputBody) -> Result<crate::models::AccountControllerResponse, Error<AddLiquidityWethError>> {
+pub async fn add_liquidity_weth(configuration: &configuration::Configuration, authorization: &str, name: &str, input_body: crate::models::InputBody) -> Result<crate::models::TransactionApiResponse, Error<AddLiquidityWethError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -134,7 +134,7 @@ pub async fn add_liquidity_weth(configuration: &configuration::Configuration, au
     }
 }
 
-pub async fn remove_liquidity(configuration: &configuration::Configuration, authorization: &str, name: &str, input_body: crate::models::InputBody) -> Result<crate::models::AccountControllerResponse, Error<RemoveLiquidityError>> {
+pub async fn remove_liquidity(configuration: &configuration::Configuration, authorization: &str, name: &str, input_body: crate::models::InputBody) -> Result<crate::models::TransactionApiResponse, Error<RemoveLiquidityError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -179,7 +179,7 @@ pub async fn remove_liquidity(configuration: &configuration::Configuration, auth
     }
 }
 
-pub async fn remove_liquidity_weth(configuration: &configuration::Configuration, authorization: &str, name: &str, input_body: crate::models::InputBody) -> Result<crate::models::AccountControllerResponse, Error<RemoveLiquidityWethError>> {
+pub async fn remove_liquidity_weth(configuration: &configuration::Configuration, authorization: &str, name: &str, input_body: crate::models::InputBody) -> Result<crate::models::TransactionApiResponse, Error<RemoveLiquidityWethError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;

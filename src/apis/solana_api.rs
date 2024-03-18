@@ -44,7 +44,7 @@ pub enum SignSolanaTransactionError {
 }
 
 
-pub async fn create_solana_account(configuration: &configuration::Configuration, authorization: &str, solana_input: crate::models::SolanaInput) -> Result<crate::models::AccountControllerResponse, Error<CreateSolanaAccountError>> {
+pub async fn create_solana_account(configuration: &configuration::Configuration, authorization: &str, solana_input: crate::models::SolanaInput) -> Result<crate::models::AccountApiResponse, Error<CreateSolanaAccountError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -89,7 +89,7 @@ pub async fn create_solana_account(configuration: &configuration::Configuration,
     }
 }
 
-pub async fn get_solana_account(configuration: &configuration::Configuration, authorization: &str, account_name: &str) -> Result<crate::models::AccountControllerResponse, Error<GetSolanaAccountError>> {
+pub async fn get_solana_account(configuration: &configuration::Configuration, authorization: &str, account_name: &str) -> Result<crate::models::AccountApiResponse, Error<GetSolanaAccountError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -133,7 +133,7 @@ pub async fn get_solana_account(configuration: &configuration::Configuration, au
     }
 }
 
-pub async fn list_solana_accounts(configuration: &configuration::Configuration, authorization: &str) -> Result<crate::models::AccountControllerResponse, Error<ListSolanaAccountsError>> {
+pub async fn list_solana_accounts(configuration: &configuration::Configuration, authorization: &str) -> Result<crate::models::AccountApiResponse, Error<ListSolanaAccountsError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -177,7 +177,7 @@ pub async fn list_solana_accounts(configuration: &configuration::Configuration, 
     }
 }
 
-pub async fn sign_solana_transaction(configuration: &configuration::Configuration, authorization: &str, account_name: &str, solana_transaction_input: crate::models::SolanaTransactionInput) -> Result<crate::models::AccountControllerResponse, Error<SignSolanaTransactionError>> {
+pub async fn sign_solana_transaction(configuration: &configuration::Configuration, authorization: &str, account_name: &str, solana_transaction_input: crate::models::SolanaTransactionInput) -> Result<crate::models::SolanaApiResponse, Error<SignSolanaTransactionError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;

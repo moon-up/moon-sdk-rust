@@ -44,7 +44,7 @@ pub enum SignBitcoinCashTransactionError {
 }
 
 
-pub async fn create_bitcoin_cash_account(configuration: &configuration::Configuration, authorization: &str, bitcoin_cash_input: crate::models::BitcoinCashInput) -> Result<crate::models::AccountControllerResponse, Error<CreateBitcoinCashAccountError>> {
+pub async fn create_bitcoin_cash_account(configuration: &configuration::Configuration, authorization: &str, bitcoin_cash_input: crate::models::BitcoinCashInput) -> Result<crate::models::AccountApiResponse, Error<CreateBitcoinCashAccountError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -89,7 +89,7 @@ pub async fn create_bitcoin_cash_account(configuration: &configuration::Configur
     }
 }
 
-pub async fn get_bitcoin_cash_account(configuration: &configuration::Configuration, authorization: &str, account_name: &str) -> Result<crate::models::AccountControllerResponse, Error<GetBitcoinCashAccountError>> {
+pub async fn get_bitcoin_cash_account(configuration: &configuration::Configuration, authorization: &str, account_name: &str) -> Result<crate::models::AccountApiResponse, Error<GetBitcoinCashAccountError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -133,7 +133,7 @@ pub async fn get_bitcoin_cash_account(configuration: &configuration::Configurati
     }
 }
 
-pub async fn list_bitcoin_cash_accounts(configuration: &configuration::Configuration, authorization: &str) -> Result<crate::models::AccountControllerResponse, Error<ListBitcoinCashAccountsError>> {
+pub async fn list_bitcoin_cash_accounts(configuration: &configuration::Configuration, authorization: &str) -> Result<crate::models::AccountApiResponse, Error<ListBitcoinCashAccountsError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -177,7 +177,7 @@ pub async fn list_bitcoin_cash_accounts(configuration: &configuration::Configura
     }
 }
 
-pub async fn sign_bitcoin_cash_transaction(configuration: &configuration::Configuration, authorization: &str, account_name: &str, bitcoin_cash_transaction_input: crate::models::BitcoinCashTransactionInput) -> Result<crate::models::AccountControllerResponse, Error<SignBitcoinCashTransactionError>> {
+pub async fn sign_bitcoin_cash_transaction(configuration: &configuration::Configuration, authorization: &str, account_name: &str, bitcoin_cash_transaction_input: crate::models::BitcoinCashTransactionInput) -> Result<crate::models::BitcoinCashApiResponse, Error<SignBitcoinCashTransactionError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;

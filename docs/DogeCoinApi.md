@@ -1,6 +1,6 @@
 # \DogeCoinApi
 
-All URIs are relative to *https://vault-api.usemoon.ai*
+All URIs are relative to *https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## create_doge_coin_account
 
-> crate::models::AccountControllerResponse create_doge_coin_account(authorization, doge_coin_input)
+> crate::models::AccountApiResponse create_doge_coin_account(authorization, doge_coin_input)
 
 
 ### Parameters
@@ -26,7 +26,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AccountControllerResponse**](AccountControllerResponse.md)
+[**crate::models::AccountApiResponse**](AccountAPIResponse.md)
 
 ### Authorization
 
@@ -42,7 +42,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_doge_coin_account
 
-> crate::models::AccountControllerResponse get_doge_coin_account(authorization, account_name)
+> crate::models::AccountApiResponse get_doge_coin_account(authorization, account_name)
 
 
 ### Parameters
@@ -55,7 +55,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AccountControllerResponse**](AccountControllerResponse.md)
+[**crate::models::AccountApiResponse**](AccountAPIResponse.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ Name | Type | Description  | Required | Notes
 
 ## list_doge_coin_accounts
 
-> crate::models::AccountControllerResponse list_doge_coin_accounts(authorization)
+> crate::models::AccountApiResponse list_doge_coin_accounts(authorization)
 
 
 ### Parameters
@@ -83,7 +83,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AccountControllerResponse**](AccountControllerResponse.md)
+[**crate::models::AccountApiResponse**](AccountAPIResponse.md)
 
 ### Authorization
 
@@ -99,7 +99,7 @@ Name | Type | Description  | Required | Notes
 
 ## sign_doge_coin_transaction
 
-> crate::models::AccountControllerResponse sign_doge_coin_transaction(authorization, account_name, doge_coin_transaction_input)
+> crate::models::DogeCoinApiResponse sign_doge_coin_transaction(authorization, account_name, doge_coin_transaction_input)
 
 
 ### Parameters
@@ -113,7 +113,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AccountControllerResponse**](AccountControllerResponse.md)
+[**crate::models::DogeCoinApiResponse**](DogeCoinAPIResponse.md)
 
 ### Authorization
 

@@ -1,6 +1,6 @@
 # \AaveApi
 
-All URIs are relative to *https://vault-api.usemoon.ai*
+All URIs are relative to *https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## borrow
 
-> crate::models::AccountControllerResponse borrow(authorization, name, aave_input)
+> crate::models::TransactionApiResponse borrow(authorization, name, aave_input)
 
 
 ### Parameters
@@ -27,7 +27,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AccountControllerResponse**](AccountControllerResponse.md)
+[**crate::models::TransactionApiResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 
@@ -43,7 +43,7 @@ Name | Type | Description  | Required | Notes
 
 ## lend
 
-> crate::models::AccountControllerResponse lend(authorization, name, aave_input)
+> crate::models::TransactionApiResponse lend(authorization, name, aave_input)
 
 
 ### Parameters
@@ -57,7 +57,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AccountControllerResponse**](AccountControllerResponse.md)
+[**crate::models::TransactionApiResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 
@@ -73,7 +73,7 @@ Name | Type | Description  | Required | Notes
 
 ## repay
 
-> crate::models::AccountControllerResponse repay(authorization, name, aave_input)
+> crate::models::TransactionApiResponse repay(authorization, name, aave_input)
 
 
 ### Parameters
@@ -87,7 +87,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AccountControllerResponse**](AccountControllerResponse.md)
+[**crate::models::TransactionApiResponse**](TransactionAPIResponse.md)
 
 ### Authorization
 
@@ -103,7 +103,7 @@ Name | Type | Description  | Required | Notes
 
 ## user_reserve_data
 
-> crate::models::AccountControllerResponse user_reserve_data(authorization, name, aave_input)
+> crate::models::AaveReservesApiResponse user_reserve_data(authorization, name, aave_input)
 
 
 ### Parameters
@@ -117,7 +117,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AccountControllerResponse**](AccountControllerResponse.md)
+[**crate::models::AaveReservesApiResponse**](AaveReservesAPIResponse.md)
 
 ### Authorization
 

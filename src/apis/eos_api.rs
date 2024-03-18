@@ -44,7 +44,7 @@ pub enum SignEosTransactionError {
 }
 
 
-pub async fn create_eos_account(configuration: &configuration::Configuration, authorization: &str, eos_input: crate::models::EosInput) -> Result<crate::models::AccountControllerResponse, Error<CreateEosAccountError>> {
+pub async fn create_eos_account(configuration: &configuration::Configuration, authorization: &str, eos_input: crate::models::EosInput) -> Result<crate::models::AccountApiResponse, Error<CreateEosAccountError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -89,7 +89,7 @@ pub async fn create_eos_account(configuration: &configuration::Configuration, au
     }
 }
 
-pub async fn get_eos_account(configuration: &configuration::Configuration, authorization: &str, account_name: &str) -> Result<crate::models::AccountControllerResponse, Error<GetEosAccountError>> {
+pub async fn get_eos_account(configuration: &configuration::Configuration, authorization: &str, account_name: &str) -> Result<crate::models::AccountApiResponse, Error<GetEosAccountError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -133,7 +133,7 @@ pub async fn get_eos_account(configuration: &configuration::Configuration, autho
     }
 }
 
-pub async fn list_eos_accounts(configuration: &configuration::Configuration, authorization: &str) -> Result<crate::models::AccountControllerResponse, Error<ListEosAccountsError>> {
+pub async fn list_eos_accounts(configuration: &configuration::Configuration, authorization: &str) -> Result<crate::models::AccountApiResponse, Error<ListEosAccountsError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -177,7 +177,7 @@ pub async fn list_eos_accounts(configuration: &configuration::Configuration, aut
     }
 }
 
-pub async fn sign_eos_transaction(configuration: &configuration::Configuration, authorization: &str, account_name: &str, eos_transaction_input: crate::models::EosTransactionInput) -> Result<crate::models::AccountControllerResponse, Error<SignEosTransactionError>> {
+pub async fn sign_eos_transaction(configuration: &configuration::Configuration, authorization: &str, account_name: &str, eos_transaction_input: crate::models::EosTransactionInput) -> Result<crate::models::EosApiResponse, Error<SignEosTransactionError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;

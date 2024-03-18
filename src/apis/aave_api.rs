@@ -44,7 +44,7 @@ pub enum UserReserveDataError {
 }
 
 
-pub async fn borrow(configuration: &configuration::Configuration, authorization: &str, name: &str, aave_input: crate::models::AaveInput) -> Result<crate::models::AccountControllerResponse, Error<BorrowError>> {
+pub async fn borrow(configuration: &configuration::Configuration, authorization: &str, name: &str, aave_input: crate::models::AaveInput) -> Result<crate::models::TransactionApiResponse, Error<BorrowError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -89,7 +89,7 @@ pub async fn borrow(configuration: &configuration::Configuration, authorization:
     }
 }
 
-pub async fn lend(configuration: &configuration::Configuration, authorization: &str, name: &str, aave_input: crate::models::AaveInput) -> Result<crate::models::AccountControllerResponse, Error<LendError>> {
+pub async fn lend(configuration: &configuration::Configuration, authorization: &str, name: &str, aave_input: crate::models::AaveInput) -> Result<crate::models::TransactionApiResponse, Error<LendError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -134,7 +134,7 @@ pub async fn lend(configuration: &configuration::Configuration, authorization: &
     }
 }
 
-pub async fn repay(configuration: &configuration::Configuration, authorization: &str, name: &str, aave_input: crate::models::AaveInput) -> Result<crate::models::AccountControllerResponse, Error<RepayError>> {
+pub async fn repay(configuration: &configuration::Configuration, authorization: &str, name: &str, aave_input: crate::models::AaveInput) -> Result<crate::models::TransactionApiResponse, Error<RepayError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -179,7 +179,7 @@ pub async fn repay(configuration: &configuration::Configuration, authorization: 
     }
 }
 
-pub async fn user_reserve_data(configuration: &configuration::Configuration, authorization: &str, name: &str, aave_input: crate::models::AaveInput) -> Result<crate::models::AccountControllerResponse, Error<UserReserveDataError>> {
+pub async fn user_reserve_data(configuration: &configuration::Configuration, authorization: &str, name: &str, aave_input: crate::models::AaveInput) -> Result<crate::models::AaveReservesApiResponse, Error<UserReserveDataError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;

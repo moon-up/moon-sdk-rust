@@ -44,7 +44,7 @@ pub enum SignDogeCoinTransactionError {
 }
 
 
-pub async fn create_doge_coin_account(configuration: &configuration::Configuration, authorization: &str, doge_coin_input: crate::models::DogeCoinInput) -> Result<crate::models::AccountControllerResponse, Error<CreateDogeCoinAccountError>> {
+pub async fn create_doge_coin_account(configuration: &configuration::Configuration, authorization: &str, doge_coin_input: crate::models::DogeCoinInput) -> Result<crate::models::AccountApiResponse, Error<CreateDogeCoinAccountError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -89,7 +89,7 @@ pub async fn create_doge_coin_account(configuration: &configuration::Configurati
     }
 }
 
-pub async fn get_doge_coin_account(configuration: &configuration::Configuration, authorization: &str, account_name: &str) -> Result<crate::models::AccountControllerResponse, Error<GetDogeCoinAccountError>> {
+pub async fn get_doge_coin_account(configuration: &configuration::Configuration, authorization: &str, account_name: &str) -> Result<crate::models::AccountApiResponse, Error<GetDogeCoinAccountError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -133,7 +133,7 @@ pub async fn get_doge_coin_account(configuration: &configuration::Configuration,
     }
 }
 
-pub async fn list_doge_coin_accounts(configuration: &configuration::Configuration, authorization: &str) -> Result<crate::models::AccountControllerResponse, Error<ListDogeCoinAccountsError>> {
+pub async fn list_doge_coin_accounts(configuration: &configuration::Configuration, authorization: &str) -> Result<crate::models::AccountApiResponse, Error<ListDogeCoinAccountsError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -177,7 +177,7 @@ pub async fn list_doge_coin_accounts(configuration: &configuration::Configuratio
     }
 }
 
-pub async fn sign_doge_coin_transaction(configuration: &configuration::Configuration, authorization: &str, account_name: &str, doge_coin_transaction_input: crate::models::DogeCoinTransactionInput) -> Result<crate::models::AccountControllerResponse, Error<SignDogeCoinTransactionError>> {
+pub async fn sign_doge_coin_transaction(configuration: &configuration::Configuration, authorization: &str, account_name: &str, doge_coin_transaction_input: crate::models::DogeCoinTransactionInput) -> Result<crate::models::DogeCoinApiResponse, Error<SignDogeCoinTransactionError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;

@@ -79,7 +79,7 @@ pub enum TransferFromErc20Error {
 }
 
 
-pub async fn allowance_erc20(configuration: &configuration::Configuration, authorization: &str, name: &str, input_body: crate::models::InputBody) -> Result<crate::models::AccountControllerResponse, Error<AllowanceErc20Error>> {
+pub async fn allowance_erc20(configuration: &configuration::Configuration, authorization: &str, name: &str, input_body: crate::models::InputBody) -> Result<crate::models::TransactionApiResponse, Error<AllowanceErc20Error>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -124,7 +124,7 @@ pub async fn allowance_erc20(configuration: &configuration::Configuration, autho
     }
 }
 
-pub async fn approve_erc20(configuration: &configuration::Configuration, authorization: &str, name: &str, input_body: crate::models::InputBody) -> Result<crate::models::AccountControllerResponse, Error<ApproveErc20Error>> {
+pub async fn approve_erc20(configuration: &configuration::Configuration, authorization: &str, name: &str, input_body: crate::models::InputBody) -> Result<crate::models::TransactionApiResponse, Error<ApproveErc20Error>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -169,7 +169,7 @@ pub async fn approve_erc20(configuration: &configuration::Configuration, authori
     }
 }
 
-pub async fn balance_of_erc20(configuration: &configuration::Configuration, authorization: &str, name: &str, input_body: crate::models::InputBody) -> Result<crate::models::AccountControllerResponse, Error<BalanceOfErc20Error>> {
+pub async fn balance_of_erc20(configuration: &configuration::Configuration, authorization: &str, name: &str, input_body: crate::models::InputBody) -> Result<crate::models::TransactionApiResponse, Error<BalanceOfErc20Error>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -214,7 +214,7 @@ pub async fn balance_of_erc20(configuration: &configuration::Configuration, auth
     }
 }
 
-pub async fn decimals_erc20(configuration: &configuration::Configuration, authorization: &str, name: &str, input_body: crate::models::InputBody) -> Result<crate::models::AccountControllerResponse, Error<DecimalsErc20Error>> {
+pub async fn decimals_erc20(configuration: &configuration::Configuration, authorization: &str, name: &str, input_body: crate::models::InputBody) -> Result<crate::models::TransactionApiResponse, Error<DecimalsErc20Error>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -259,7 +259,7 @@ pub async fn decimals_erc20(configuration: &configuration::Configuration, author
     }
 }
 
-pub async fn name_erc20(configuration: &configuration::Configuration, authorization: &str, name: &str, input_body: crate::models::InputBody) -> Result<crate::models::AccountControllerResponse, Error<NameErc20Error>> {
+pub async fn name_erc20(configuration: &configuration::Configuration, authorization: &str, name: &str, input_body: crate::models::InputBody) -> Result<crate::models::TransactionApiResponse, Error<NameErc20Error>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -304,7 +304,7 @@ pub async fn name_erc20(configuration: &configuration::Configuration, authorizat
     }
 }
 
-pub async fn symbol_erc20(configuration: &configuration::Configuration, authorization: &str, name: &str, input_body: crate::models::InputBody) -> Result<crate::models::AccountControllerResponse, Error<SymbolErc20Error>> {
+pub async fn symbol_erc20(configuration: &configuration::Configuration, authorization: &str, name: &str, input_body: crate::models::InputBody) -> Result<crate::models::TransactionApiResponse, Error<SymbolErc20Error>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -349,7 +349,7 @@ pub async fn symbol_erc20(configuration: &configuration::Configuration, authoriz
     }
 }
 
-pub async fn total_supply_erc20(configuration: &configuration::Configuration, authorization: &str, name: &str, input_body: crate::models::InputBody) -> Result<crate::models::AccountControllerResponse, Error<TotalSupplyErc20Error>> {
+pub async fn total_supply_erc20(configuration: &configuration::Configuration, authorization: &str, name: &str, input_body: crate::models::InputBody) -> Result<crate::models::TransactionApiResponse, Error<TotalSupplyErc20Error>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -394,7 +394,7 @@ pub async fn total_supply_erc20(configuration: &configuration::Configuration, au
     }
 }
 
-pub async fn transfer_erc20(configuration: &configuration::Configuration, authorization: &str, name: &str, input_body: crate::models::InputBody) -> Result<crate::models::AccountControllerResponse, Error<TransferErc20Error>> {
+pub async fn transfer_erc20(configuration: &configuration::Configuration, authorization: &str, name: &str, input_body: crate::models::InputBody) -> Result<crate::models::TransactionApiResponse, Error<TransferErc20Error>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -439,7 +439,7 @@ pub async fn transfer_erc20(configuration: &configuration::Configuration, author
     }
 }
 
-pub async fn transfer_from_erc20(configuration: &configuration::Configuration, authorization: &str, name: &str, input_body: crate::models::InputBody) -> Result<crate::models::AccountControllerResponse, Error<TransferFromErc20Error>> {
+pub async fn transfer_from_erc20(configuration: &configuration::Configuration, authorization: &str, name: &str, input_body: crate::models::InputBody) -> Result<crate::models::TransactionApiResponse, Error<TransferFromErc20Error>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;

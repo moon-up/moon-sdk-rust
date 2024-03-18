@@ -23,7 +23,7 @@ pub enum ResolveError {
 }
 
 
-pub async fn resolve(configuration: &configuration::Configuration, authorization: &str, ens_resolve_input: crate::models::EnsResolveInput) -> Result<crate::models::AccountControllerResponse, Error<ResolveError>> {
+pub async fn resolve(configuration: &configuration::Configuration, authorization: &str, ens_resolve_input: crate::models::EnsResolveInput) -> Result<crate::models::EnsResolveApiResponse, Error<ResolveError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
