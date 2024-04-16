@@ -40,7 +40,7 @@ impl Configuration {
 impl Default for Configuration {
     fn default() -> Self {
         Configuration {
-            base_path: "https://moon-vault-api-git-ew-supabase-migration-moonup.vercel.app".to_owned(),
+            base_path: "https://beta.usemoon.ai".to_owned(),
             user_agent: Some("OpenAPI-Generator/1.0.0/rust".to_owned()),
             client: reqwest::Client::new(),
             basic_auth: None,

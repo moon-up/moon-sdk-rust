@@ -17,6 +17,14 @@ pub struct TransactionApiResponse {
     pub success: bool,
     #[serde(rename = "message")]
     pub message: String,
+    #[serde(rename = "body", skip_serializing_if = "Option::is_none")]
+    pub body: Option<Box<crate::models::InputBody>>,
+    #[serde(rename = "address", skip_serializing_if = "Option::is_none")]
+    pub address: Option<String>,
+    #[serde(rename = "transaction_hash", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
+    pub transaction_hash: Option<Option<serde_json::Value>>,
+    #[serde(rename = "signedTx", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
+    pub signed_tx: Option<Option<serde_json::Value>>,
     #[serde(rename = "data", skip_serializing_if = "Option::is_none")]
     pub data: Option<Box<crate::models::Transaction>>,
 }
@@ -26,6 +34,10 @@ impl TransactionApiResponse {
         TransactionApiResponse {
             success,
             message,
+            body: None,
+            address: None,
+            transaction_hash: None,
+            signed_tx: None,
             data: None,
         }
     }

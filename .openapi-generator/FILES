@@ -54,7 +54,6 @@ docs/EosTransactionOutput.md
 docs/Erc1155Api.md
 docs/Erc1155Request.md
 docs/Erc20Api.md
-docs/Erc4337Api.md
 docs/Erc721Api.md
 docs/Erc721Request.md
 docs/FiatCurrency.md
@@ -137,7 +136,6 @@ src/apis/ens_api.rs
 src/apis/eos_api.rs
 src/apis/erc1155_api.rs
 src/apis/erc20_api.rs
-src/apis/erc4337_api.rs
 src/apis/erc721_api.rs
 src/apis/litecoin_api.rs
 src/apis/mod.rs

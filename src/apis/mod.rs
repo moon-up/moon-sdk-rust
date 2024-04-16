@@ -102,7 +102,6 @@ pub mod ens_api;
 pub mod erc1155_api;
 pub mod eos_api;
 pub mod erc20_api;
-pub mod erc4337_api;
 pub mod erc721_api;
 pub mod litecoin_api;
 pub mod oneinch_api;

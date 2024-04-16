@@ -17,6 +17,10 @@ pub struct BitcoinCashApiResponse {
     pub success: bool,
     #[serde(rename = "message")]
     pub message: String,
+    #[serde(rename = "body", skip_serializing_if = "Option::is_none")]
+    pub body: Option<Box<crate::models::InputBody>>,
+    #[serde(rename = "address", skip_serializing_if = "Option::is_none")]
+    pub address: Option<String>,
     #[serde(rename = "data", skip_serializing_if = "Option::is_none")]
     pub data: Option<Box<crate::models::BitcoinCashTransactionOutput>>,
 }
@@ -26,6 +30,8 @@ impl BitcoinCashApiResponse {
         BitcoinCashApiResponse {
             success,
             message,
+            body: None,
+            address: None,
             data: None,
         }
     }
